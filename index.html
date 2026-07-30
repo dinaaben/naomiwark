@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail" data-bg-color="#ffffff">
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="800" fill="#ffffff"></rect>
+<text x="600" y="460" font-family="Georgia, serif" font-style="italic" font-size="220" fill="#a9714f" text-anchor="middle">NW</text>
+</svg>
+</template>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body{margin:0;-webkit-font-smoothing:antialiased;background:#ffffff}
+  a{color:inherit;text-decoration:none}
+  a:hover{opacity:.75}
+</style>
+</helmet>
+<div style="background:#ffffff;color:#232220;font-family:Inter,sans-serif">
+
+<div style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-bottom:1px solid #e6e1d8">
+<div style="max-width:1080px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:76px">
+<div style="font-family:'Cormorant Garamond',serif;font-size:22px;letter-spacing:.02em">Naomi Wark</div>
+<div style="display:flex;gap:32px;font-size:13px;color:#6b6862">
+<a href="#gallery" style="color:#6b6862">Photos</a>
+<a href="#credits" style="color:#6b6862">Resume</a>
+<a href="#contact" style="color:#6b6862">Contact</a>
+</div>
+</div>
+</div>
+
+<header style="max-width:1080px;margin:0 auto;padding:64px 40px 88px;display:grid;grid-template-columns:340px 1fr;gap:56px;align-items:center">
+<div style="position:relative;aspect-ratio:4/5;border-radius:3px;overflow:hidden">
+<span aria-hidden="true" style="position:absolute;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:96px;color:rgba(35,34,32,.05);left:-8px;top:36%;white-space:nowrap;line-height:1;z-index:0">Naomi</span>
+<image-slot id="hero-photo" src="assets/naomi-hero.jpg" shape="rect" placeholder="Drop primary headshot" style="position:relative;z-index:1;width:100%;height:100%"></image-slot>
+</div>
+<div>
+<p style="font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#a9714f;margin:0 0 12px">Actor</p>
+<h1 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:58px;line-height:1.02;letter-spacing:-.01em;margin:0">Naomi Wark</h1>
+<p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:#a9714f;margin:8px 0 0">Screen &amp; stage</p>
+<p style="font-size:16px;line-height:1.75;color:#6b6862;max-width:44ch;margin:20px 0 0">Sample bio copy — replace with a few sentences in her own voice: where she trained, the kind of roles she's drawn to, and what makes her work distinct.</p>
+<div style="margin-top:22px;display:flex;flex-wrap:wrap;gap:6px 28px;font-size:14px;color:#6b6862">
+<span>Based in Montreal</span><span>Represented by Agency Name</span>
+</div>
+<div style="margin-top:28px;display:flex;gap:14px">
+<a href="#contact" style="display:inline-block;padding:12px 26px;font-size:13px;letter-spacing:.04em;border-radius:2px;border:1px solid #232220;background:#232220;color:#ffffff">Get in touch</a>
+</div>
+</div>
+</header>
+
+<section id="gallery" style="padding:64px 0;border-top:1px solid #e6e1d8;position:relative">
+<div style="max-width:1080px;margin:0 auto;padding:0 40px">
+<p style="font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#a9714f;margin:0 0 10px">Photos</p>
+<h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:32px;margin:0 0 28px">Gallery</h2>
+
+<p style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6b6862;margin:0 0 14px">Headshots</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px">
+
+<div style="position:relative;aspect-ratio:3/4;border-radius:3px;overflow:hidden;transition:transform .25s ease" style-hover="transform:translateY(-4px)">
+<image-slot id="photo-1" src="assets/naomi-whiteshirt.jpg" shape="rect" placeholder="Headshot — straight on" style="width:100%;height:100%"></image-slot>
+<span onClick="{{ open1 }}" style="position:absolute;bottom:10px;right:10px;padding:5px 12px;border-radius:2px;background:rgba(255,255,255,.92);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#232220;cursor:pointer;z-index:2">View</span>
+</div>
+
+<div style="position:relative;aspect-ratio:3/4;border-radius:3px;overflow:hidden;transition:transform .25s ease" style-hover="transform:translateY(-4px)">
+<image-slot id="photo-2" src="assets/naomi-purple-2.jpg" shape="rect" placeholder="Headshot — 3/4 turn" style="width:100%;height:100%"></image-slot>
+<span onClick="{{ open2 }}" style="position:absolute;bottom:10px;right:10px;padding:5px 12px;border-radius:2px;background:rgba(255,255,255,.92);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#232220;cursor:pointer;z-index:2">View</span>
+</div>
+
+<div style="position:relative;aspect-ratio:3/4;border-radius:3px;overflow:hidden;transition:transform .25s ease" style-hover="transform:translateY(-4px)">
+<image-slot id="photo-3" src="assets/naomi-tank.jpg" shape="rect" placeholder="Commercial look" style="width:100%;height:100%"></image-slot>
+<span onClick="{{ open3 }}" style="position:absolute;bottom:10px;right:10px;padding:5px 12px;border-radius:2px;background:rgba(255,255,255,.92);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#232220;cursor:pointer;z-index:2">View</span>
+</div>
+
+</div>
+
+<p style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6b6862;margin:36px 0 14px">On stage</p>
+<div style="position:relative">
+<span onClick="{{ scrollLeft }}" style="position:absolute;left:-6px;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.95);box-shadow:0 1px 6px rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:3;font-size:20px;color:#232220">‹</span>
+<span onClick="{{ scrollRight }}" style="position:absolute;right:-6px;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.95);box-shadow:0 1px 6px rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:3;font-size:20px;color:#232220">›</span>
+<div ref="{{ carouselRef }}" style="display:flex;gap:16px;overflow-x:auto;padding-bottom:10px;scroll-behavior:smooth">
+
+<sc-for list="{{ stagePhotos }}" as="photo" hint-placeholder-count="6">
+<div style="position:relative;flex:none;height:320px;aspect-ratio:3/2;border-radius:3px;overflow:hidden;background:#f2efe9;transition:transform .25s ease" style-hover="transform:translateY(-4px)">
+<image-slot id="{{ photo.id }}" src="{{ photo.src }}" fit="contain" shape="rect" placeholder="{{ photo.cap }}" style="width:100%;height:100%"></image-slot>
+<span onClick="{{ photo.open }}" style="position:absolute;bottom:10px;right:10px;padding:5px 12px;border-radius:2px;background:rgba(255,255,255,.92);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#232220;cursor:pointer;z-index:2">View</span>
+</div>
+</sc-for>
+
+</div>
+</div>
+
+<sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:0;background:rgba(35,34,32,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;z-index:10;padding:40px">
+<div style="width:min(600px,80%);max-height:70vh;aspect-ratio:{{ lbPhoto.ratio }}">
+<image-slot id="{{ lbPhoto.id }}" src="{{ lbPhoto.src }}" fit="contain" shape="rect" placeholder="{{ lbCaption }}" style="width:100%;height:100%"></image-slot>
+</div>
+<p style="color:#ffffff;font-size:13px;letter-spacing:.03em;margin:0">{{ lbCaption }}</p>
+<div style="display:flex;gap:22px;align-items:center">
+<span onClick="{{ prev }}" style="color:#ffffff;cursor:pointer;font-size:24px">‹</span>
+<span onClick="{{ closeLb }}" style="color:#ffffff;cursor:pointer;font-size:12px;text-transform:uppercase;letter-spacing:.08em;border:1px solid rgba(255,255,255,.4);padding:8px 18px;border-radius:2px">Close</span>
+<span onClick="{{ next }}" style="color:#ffffff;cursor:pointer;font-size:24px">›</span>
+</div>
+</div>
+</sc-if>
+</div>
+</section>
+
+<section id="credits" style="padding:64px 0;border-top:1px solid #e6e1d8">
+<div style="max-width:1080px;margin:0 auto;padding:0 40px">
+<p style="font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#a9714f;margin:0 0 10px">Experience</p>
+<h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:32px;margin:0 0 32px">Resume</h2>
+
+<div style="margin-bottom:32px">
+<h3 style="font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:#a9714f;margin:0 0 12px">Film</h3>
+<div style="display:grid;grid-template-columns:1.3fr 1fr 1.2fr auto;gap:14px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#6b6862;padding-bottom:8px"><span>Production</span><span>Role</span><span>Director / Studio</span><span>Year</span></div>
+<div style="display:grid;grid-template-columns:1.3fr 1fr 1.2fr auto;gap:14px;padding:13px 0;border-top:1px solid #e6e1d8;font-size:15px;align-items:baseline">
+<span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px">Sundown Avenue</span><span>Lead</span><span>Dir. J. Ortiz</span><span style="font-size:13px;color:#6b6862;text-align:right">2026</span>
+</div>
+<div style="display:grid;grid-template-columns:1.3fr 1fr 1.2fr auto;gap:14px;padding:13px 0;border-top:1px solid #e6e1d8;font-size:15px;align-items:baseline">
+<span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px">Low Tide</span><span>Supporting</span><span>Dir. M. Reyes</span><span style="font-size:13px;color:#6b6862;text-align:right">2025</span>
+</div>
+</div>
+
+<div style="margin-bottom:32px">
+<h3 style="font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:#a9714f;margin:0 0 12px">Television</h3>
+<div style="display:grid;grid-template-columns:1.3fr 1fr 1.2fr auto;gap:14px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#6b6862;padding-bottom:8px"><span>Production</span><span>Role</span><span>Network</span><span>Year</span></div>
+<div style="display:grid;grid-template-columns:1.3fr 1fr 1.2fr auto;gap:14px;padding:13px 0;border-top:1px solid #e6e1d8;font-size:15px;align-items:baseline">
+<span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px">Harborline</span><span>Recurring</span><span>Sample Network</span><span style="font-size:13px;color:#6b6862;text-align:right">2025</span>
+</div>
+</div>
+
+<div style="margin-bottom:32px">
+<h3 style="font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:#a9714f;margin:0 0 12px">Theater</h3>
+<div style="display:grid;grid-template-columns:1.3fr 1fr 1.2fr auto;gap:14px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#6b6862;padding-bottom:8px"><span>Production</span><span>Role</span><span>Company</span><span>Year</span></div>
+<div style="display:grid;grid-template-columns:1.3fr 1fr 1.2fr auto;gap:14px;padding:13px 0;border-top:1px solid #e6e1d8;font-size:15px;align-items:baseline">
+<span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px">The Winter Guest</span><span>Frances</span><span>Sample Theater Co.</span><span style="font-size:13px;color:#6b6862;text-align:right">2024</span>
+</div>
+</div>
+
+<div>
+<h3 style="font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:#a9714f;margin:0 0 12px">Training</h3>
+<div style="display:grid;grid-template-columns:1.3fr 1fr 1.2fr auto;gap:14px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#6b6862;padding-bottom:8px"><span>Program</span><span>Focus</span><span>Instructor / School</span><span>Year</span></div>
+<div style="display:grid;grid-template-columns:1.3fr 1fr 1.2fr auto;gap:14px;padding:13px 0;border-top:1px solid #e6e1d8;font-size:15px;align-items:baseline">
+<span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px">Scene Study</span><span>Meisner Technique</span><span>Sample Studio</span><span style="font-size:13px;color:#6b6862;text-align:right">2023–present</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" style="padding:64px 0;border-top:1px solid #e6e1d8">
+<div style="max-width:1080px;margin:0 auto;padding:0 40px">
+<p style="font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#a9714f;margin:0 0 10px">Get in touch</p>
+<h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:32px;margin:0 0 30px">Contact</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px">
+<div>
+<p style="font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#a9714f;margin:0 0 6px">Agent</p>
+<p style="font-family:'Cormorant Garamond',serif;font-size:20px;margin:0"><a href="mailto:agent@example.com" style="color:#232220;border-bottom:1px solid #a9714f">agent@example.com</a></p>
+</div>
+<div>
+<p style="font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#a9714f;margin:0 0 6px">Direct</p>
+<p style="font-family:'Cormorant Garamond',serif;font-size:20px;margin:0"><a href="mailto:naomi@example.com" style="color:#232220;border-bottom:1px solid #a9714f">naomi@example.com</a></p>
+</div>
+<div>
+<p style="font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#a9714f;margin:0 0 6px">Instagram</p>
+<p style="font-family:'Cormorant Garamond',serif;font-size:20px;margin:0"><a href="#" style="color:#232220;border-bottom:1px solid #a9714f">@naomiwark</a></p>
+</div>
+</div>
+</div>
+</section>
+
+<footer style="padding:40px 0;text-align:center;font-size:12px;color:#6b6862">&copy; 2026 Naomi Wark. Site by family, with a little help from Claude.</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  headshots = [
+    { id: 'photo-1', cap: 'Headshot — straight on', src: 'assets/naomi-whiteshirt.jpg', ratio: '3/4' },
+    { id: 'photo-2', cap: 'Headshot — 3/4 turn', src: 'assets/naomi-purple-2.jpg', ratio: '3/4' },
+    { id: 'photo-3', cap: 'Commercial look', src: 'assets/naomi-tank.jpg', ratio: '3/4' }
+  ];
+
+  carouselRef = React.createRef();
+  scrollCarousel(dir) {
+    const el = this.carouselRef.current;
+    if (el) el.scrollBy({ left: dir * 360, behavior: 'smooth' });
+  }
+
+  state = { lb: null, stagePhotos: [] };
+
+  async componentDidMount() {
+    const mod = await import('./stage-photos.js');
+    this.setState({
+      stagePhotos: mod.stagePhotos.map((p, i) => ({ id: 'stage-' + i, cap: p.cap, src: p.file, ratio: '3/2' }))
+    });
+  }
+
+  openLb(i) { this.setState({ lb: i }); }
+  closeLb() { this.setState({ lb: null }); }
+  step(dir) {
+    const total = this.headshots.length + this.state.stagePhotos.length;
+    this.setState(s => {
+      if (s.lb === null) return null;
+      return { lb: (s.lb + dir + total) % total };
+    });
+  }
+
+  renderVals() {
+    const stage = this.state.stagePhotos.map((p, i) => ({ ...p, open: () => this.openLb(this.headshots.length + i) }));
+    const all = [...this.headshots, ...this.state.stagePhotos];
+    const idx = this.state.lb;
+    const hasOpen = idx !== null && idx !== undefined && !!all[idx];
+    return {
+      open1: () => this.openLb(0),
+      open2: () => this.openLb(1),
+      open3: () => this.openLb(2),
+      stagePhotos: stage,
+      lbOpen: hasOpen,
+      lbPhoto: hasOpen ? all[idx] : null,
+      lbCaption: hasOpen ? all[idx].cap : '',
+      closeLb: () => this.closeLb(),
+      next: () => this.step(1),
+      prev: () => this.step(-1),
+      carouselRef: this.carouselRef,
+      scrollLeft: () => this.scrollCarousel(-1),
+      scrollRight: () => this.scrollCarousel(1),
+    };
+  }
+}
+</script>
+</body>
+</html>
